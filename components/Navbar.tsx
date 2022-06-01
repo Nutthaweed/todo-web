@@ -3,7 +3,7 @@ import ThemeToggle from './theme-toggle';
 
 const Navbar: React.FC = () => {
     return (
-        <div className="flex font-xl">
+        <div className="text-2xl">
             Whattodo
             <ThemeToggle />
             </div>
