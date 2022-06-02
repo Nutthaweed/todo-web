@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import CheckboxAnimated from '../components/checkbox'
 import { VStack } from '@chakra-ui/react'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <VStack>
       <Navbar />
       <CheckboxAnimated />
+      <footer className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600">Created by Firelinkshrine</footer>
       </VStack>
     </div>
   )
