@@ -10,6 +10,7 @@ const ThemeToggle: React.FC = () => {
        onClick={toggleColorMode}
        colorScheme={useColorModeValue('cyan' , 'purple')}
        icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+       isRound='true'
        >
 
        </IconButton>
