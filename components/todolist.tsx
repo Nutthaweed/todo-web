@@ -1,22 +1,15 @@
 import React, {useState, useEffect} from 'react'
-import { CheckboxGroup, Checkbox, useColorModeValue, IconButton, HStack, Text, VStack, StackDivider, useColorMode} from '@chakra-ui/react'
+import { CheckboxGroup, Checkbox, useColorModeValue, IconButton, HStack, Text, VStack, StackDivider,  Badge} from '@chakra-ui/react'
 import { FaTrash } from 'react-icons/fa'
 
-const Todolist: React.FC = () => { 
-    const todos = [
-        {
-            id: 1,
-            body: 'get rekt'
-        },
-        {
-            id: 2,
-            body: 'write todo web'
-        },
-        {
-            id: 3,
-            body: 'asdasdasd'
-        }
-    ]
+const Todolist: React.FC = ({todos, deleteTodo}) => { 
+    if (!todos.length) {
+        return (
+            <Badge colorScheme={useColorModeValue('cyan', 'purple')} p="4" m="4" borderRadius="lg">
+                No todos Congratuation! 🏆
+            </Badge>
+        )
+    }
     return (
         <VStack divider={<StackDivider />} borderColor={useColorModeValue('cyan', 'purple')} borderWidth="2px" borderRadius="lg" 
         p="4" w="100%"
@@ -27,7 +20,7 @@ const Todolist: React.FC = () => {
                 <Checkbox>
                     <Text>
                     {todo.body}
-                    <IconButton aria-label='Delete todo' icon={<FaTrash/>} isRound="true"   />
+                    <IconButton aria-label='Delete todo' icon={<FaTrash/>} isRound="true" onClick={() => deleteTodo(todo.id)} bg={useColorModeValue('cyan', 'purple')} />
                     </Text>
                 </Checkbox>
            </CheckboxGroup>
