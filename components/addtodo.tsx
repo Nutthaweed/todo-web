@@ -2,7 +2,7 @@ import { HStack, Input, Button, useColorModeValue } from '@chakra-ui/react'
 import  React from 'react'
 
 const AddTodo: React.FC = () => {
-    const handleSubmit = (e) =>{
+    const handleSubmit = () =>{
 
     }
     return (

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import CheckboxAnimated from '../components/checkbox'
 import { VStack } from '@chakra-ui/react'
-import Image from 'next/image'
+
 
 const Home: NextPage = () => {
   return (
