@@ -16,7 +16,7 @@ const Todolist: React.FC = ({todos, deleteTodo}) => {
         >
         {todos.map((todo) => (
             <HStack key={todo.id}>
-                <CheckboxGroup size="lg" colorScheme={useColorModeValue('cyan','purple')} >
+                <CheckboxGroup size="lg" >
                 <Checkbox>
                     <Text>
                     {todo.body}
