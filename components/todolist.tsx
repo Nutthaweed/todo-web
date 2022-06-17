@@ -20,7 +20,7 @@ const Todolist: React.FC = ({todos, deleteTodo}) => {
                 <Checkbox>
                     <Text>
                     {todo.body}
-                    <IconButton aria-label='Delete todo' icon={<FaTrash/>} isRound="true" onClick={() => deleteTodo(todo.id)} bg={useColorModeValue('cyan', 'purple')} />
+                    <IconButton aria-label='Delete todo' icon={<FaTrash/>} isRound="true" onClick={() => deleteTodo(todo.id)}  />
                     </Text>
                 </Checkbox>
            </CheckboxGroup>
