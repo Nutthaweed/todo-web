@@ -5,7 +5,7 @@ import { FaTrash } from 'react-icons/fa'
 const Todolist: React.FC = ({todos, deleteTodo}) => { 
     if (!todos.length) {
         return (
-            <Badge colorScheme={useColorModeValue('cyan', 'purple')} p="4" m="4" borderRadius="lg">
+            <Badge  p="4" m="4" borderRadius="lg">
                 No todos Congratuation! 🏆
             </Badge>
         )
