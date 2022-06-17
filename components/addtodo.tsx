@@ -9,11 +9,11 @@ const AddTodo: React.FC = ({addTodo}) => {
      if (!content) {
         toast({
             render: () => (
-                <Box color={useColorModeValue('purple', 'cyan')} p={3} bg={useColorModeValue('cyan', 'purple')}>
+                <Box  p={3} bg={useColorModeValue('cyan', 'purple')}>
                     You must enter a todo
                 </Box>
             ),
-            isCloseable: true,
+            isClosable: true,
             status: 'error',
             duration: 1000
         })
