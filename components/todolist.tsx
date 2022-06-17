@@ -12,11 +12,11 @@ const Todolist: React.FC = ({todos, deleteTodo}) => {
     }
     return (
         <VStack divider={<StackDivider />} borderColor="purple" borderWidth="2px" borderRadius="lg" 
-        p="4" w="100%"
+        p="4" w="100%" color={useColorModeValue('cyan','purple')} 
         >
         {todos.map((todo) => (
             <HStack key={todo.id}>
-                <CheckboxGroup colorScheme={useColorModeValue('cyan','purple')} size="lg" >
+                <CheckboxGroup size="lg" >
                 <Checkbox>
                     <Text>
                     {todo.body}
