@@ -11,7 +11,7 @@ const Todolist: React.FC = ({todos, deleteTodo}) => {
         )
     }
     return (
-        <VStack divider={<StackDivider />} borderColor={useColorModeValue('cyan', 'purple')} borderWidth="2px" borderRadius="lg" 
+        <VStack divider={<StackDivider />} borderColor="purple" borderWidth="2px" borderRadius="lg" 
         p="4" w="100%"
         >
         {todos.map((todo) => (
