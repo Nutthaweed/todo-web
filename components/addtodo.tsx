@@ -9,7 +9,7 @@ const AddTodo: React.FC = ({addTodo}) => {
      if (!content) {
         toast({
             render: () => (
-                <Box  p={3} bg={useColorModeValue('cyan', 'purple')}>
+                <Box  p={3} bg="red">
                     You must enter a todo
                 </Box>
             ),
