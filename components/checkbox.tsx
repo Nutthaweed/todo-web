@@ -1,16 +1,20 @@
 import React, { useState, useEffect} from 'react'
-import { useColorModeValue, Fade, useDisclosure, Button } from '@chakra-ui/react'
+import { useColorModeValue, Fade, useDisclosure, Button} from '@chakra-ui/react'
 import Todolist from './todolist'
 import AddTodo from './addtodo'
 
 const CheckboxAnimated: React.FC = () => {
-  const  { isOpen, onToggle } = useDisclosure()
-  
-const [todos, setTodos] = useState( () => JSON.parse(localStorage.getItem('todos')) || [])
 
-useEffect(() => {
-   localStorage.setItem('todos', JSON.stringify(todos))
-}, [todos])
+  const  { isOpen, onToggle } = useDisclosure()
+  const initialTodos = [
+    {
+      id: 1,
+      body: 'Learn about React',
+    }
+  ]
+
+  const [todos, setTodos] = useState(initialTodos)
+  
 
 function deleteTodo(id) {
   const newTodos = todos.filter(todo => {
